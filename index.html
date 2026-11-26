@@ -64,6 +64,16 @@
     p { margin: 0 0 13px; }
     ul { margin: 0 0 16px; padding-left: 1.35rem; }
     li { padding-left: 3px; margin: 3px 0; }
+    article p, article li {
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-wrap: pretty;
+      widows: 2;
+      orphans: 2;
+    }
+    article { text-rendering: optimizeLegibility; }
     strong { font-weight: 650; }
     a { color: inherit; }
     [hidden] { display: none !important; }
@@ -86,15 +96,15 @@
 
     <article id="policy-en" lang="en">
       <h1>Privacy Policy</h1>
-      <p class="effective"><strong>Effective date:</strong> [26.11.2026]</p>
+      <p class="effective"><strong>Effective date:</strong> 26.11.2026</p>
 
       <h2>1. About this application</h2>
       <p>noteS. is an offline-first note-taking application for Android.</p>
-      <p>The application is designed to store your notes and related content locally on your device. It does not require an account, does not operate a developer server for storing your data, and does not transmit your notes or other application content to the developer.</p>
+      <p>The application is designed to store notes and related content locally on the device. It does not require an account, does not use a developer-operated server to store application data, and does not transmit notes or other application content to the developer.</p>
       <p>The application does not contain advertising, analytics, tracking or third-party crash-reporting services.</p>
 
-      <h2>2. Data stored on your device</h2>
-      <p>Depending on the features you use, noteS. stores the following information locally:</p>
+      <h2>2. Data stored on the device</h2>
+      <p>Depending on the features in use, noteS. stores the following information locally:</p>
       <ul>
         <li>Notes, including titles, text and formatted content.</li>
         <li>Task lists and note-related metadata.</li>
@@ -107,48 +117,48 @@
 
       <h2>3. Data protection</h2>
       <p>Note titles and content, including formatted text and task lists, are encrypted using AES-256-GCM.</p>
-      <p>Your application password is not stored in plain text. Encryption keys are protected using password-based cryptographic mechanisms and Android security features.</p>
+      <p>The application password is not stored in plain text. Encryption keys are protected using password-based cryptographic mechanisms and Android security features.</p>
       <p>Not all locally stored information is separately encrypted by the application. In particular, voice recordings, sketches, certain database metadata and application preferences are stored in the application's private storage without additional application-level encryption.</p>
       <p>These files are protected by Android's application sandbox and the device's security mechanisms.</p>
-      <p>If you use biometric unlocking, authentication is handled by Android. noteS. does not access or store biometric templates or fingerprint or facial data.</p>
+      <p>When biometric unlocking is enabled, authentication is handled by Android. noteS. does not access or store biometric templates or fingerprint or facial data.</p>
 
       <h2>4. Permissions and application features</h2>
       <p>The application uses permissions only for the following purposes:</p>
       <ul>
-        <li><strong>Microphone:</strong> to record voice notes when you choose to use the recording feature. Recordings are stored locally.</li>
+        <li><strong>Microphone:</strong> to record voice notes when the recording feature is activated. Recordings are stored locally.</li>
         <li><strong>Notifications:</strong> to display local reminders. Notification content does not reveal note titles or note text.</li>
         <li><strong>Device restart:</strong> to restore scheduled reminders after a restart. This uses local reminder information.</li>
         <li><strong>Biometric authentication:</strong> to request authentication through Android's system interface.</li>
       </ul>
-      <p>The application does not use these permissions to collect or transmit your personal content.</p>
+      <p>These permissions are not used to collect or transmit private application content.</p>
 
       <h2>5. Backups and external services</h2>
       <p>Automatic Android backup is disabled.</p>
-      <p>noteS. provides manual backup and restore. You choose where to save or retrieve a backup using Android's system file picker.</p>
-      <p>If you choose an external or cloud storage provider, that provider may process the backup according to its own privacy policy and terms.</p>
+      <p>noteS. provides manual backup and restore. The backup destination or source is selected using Android's system file picker.</p>
+      <p>When an external or cloud storage provider is selected, that provider may process the backup according to its own privacy policy and terms.</p>
       <p><strong>Password-protected backups</strong> are encrypted and are intended to protect the confidentiality of their contents.</p>
       <p><strong>Backups created without a password are not confidential.</strong> Although their contents are encrypted, the key required to decrypt them is included in the backup file. Anyone who obtains that file may be able to access its contents.</p>
 
       <h2>6. External links and clipboard</h2>
-      <p>The application may open external links, including links contained in your notes and an optional voluntary-support page.</p>
-      <p>When you open an external link, it is handled by your browser or another application. The external service is governed by its own privacy policy. noteS. does not send your notes to the external service as part of opening a link.</p>
-      <p>When you copy content, it is placed on the Android system clipboard. Clipboard access and retention are controlled by Android and may depend on your device and other applications.</p>
+      <p>The application may open external links, including links contained in notes and an optional voluntary-support page.</p>
+      <p>External links are handled by the browser or another application. The external service is governed by its own privacy policy. Opening a link through noteS. does not itself send note content to that service.</p>
+      <p>Copied content is placed on the Android system clipboard. Clipboard access and retention are controlled by Android and may depend on the device and other applications.</p>
 
       <h2>7. Data sharing and transmission</h2>
-      <p>The application does not have Internet access and does not transmit your notes, recordings, sketches or application preferences to the developer.</p>
-      <p>The developer does not collect or sell this content.</p>
-      <p>Data may leave your device when you explicitly export a backup to a location or provider you choose, or when you open an external link. In such cases, the selected external provider or service operates under its own privacy terms.</p>
+      <p>The application does not request the Android Internet permission and does not transmit notes, recordings, sketches or application preferences to the developer.</p>
+      <p>The developer does not collect or sell this application content.</p>
+      <p>Data may leave the device when a backup is explicitly exported to a selected location or provider, or when an external link is opened. In such cases, the selected external provider or service operates under its own privacy terms.</p>
 
       <h2>8. Data retention and deletion</h2>
-      <p>Your data remains in the application's private storage until you delete it or remove the application's data.</p>
-      <p>You can delete individual notes within the application. Associated recordings and safely removable sketches are also deleted.</p>
-      <p>Clearing the application's storage or uninstalling it removes locally stored application data. Any backup files exported elsewhere must be deleted separately.</p>
-      <p>The developer does not have access to your locally stored notes and cannot delete them remotely.</p>
+      <p>Data remains in the application's private storage until it is deleted or the application's data is removed.</p>
+      <p>Individual notes can be deleted within the application. Associated recordings and sketches that can be safely removed are also deleted.</p>
+      <p>Clearing the application's storage or uninstalling it removes locally stored application data. Backup files exported elsewhere must be deleted separately.</p>
+      <p>The developer does not have access to locally stored notes and cannot delete them remotely.</p>
 
       <h2>9. Contact</h2>
       <p>For questions about this Privacy Policy or the application's privacy practices, contact:</p>
-      <p><strong>Developer / Publisher:</strong> [MinimalW / Bartosz Wawrzeńczak]<br>
-      <strong>Contact email:</strong> [minimalwstudio@gmail.com]</p>
+      <p><strong>Developer / Publisher:</strong> MinimalW / Bartosz Wawrzeńczak<br>
+      <strong>Contact email:</strong> minimalwstudio@gmail.com</p>
 
       <h2>10. Changes to this Policy</h2>
       <p>This Privacy Policy may be updated when application functionality or applicable requirements change. The latest version will be published at the same address, together with its effective date.</p>
@@ -156,15 +166,15 @@
 
     <article id="policy-pl" lang="pl" hidden>
       <h1>Polityka prywatności</h1>
-      <p class="effective"><strong>Data wejścia w życie:</strong> [26.11.2026]</p>
+      <p class="effective"><strong>Data wejścia w życie:</strong> 26.11.2026</p>
 
       <h2>1. Informacje o aplikacji</h2>
       <p>noteS. to aplikacja do notowania na Androida, zaprojektowana zgodnie z zasadą offline-first.</p>
-      <p>Aplikacja przechowuje notatki i powiązane z nimi treści lokalnie na urządzeniu użytkownika. Nie wymaga zakładania konta, nie korzysta z serwera twórcy do przechowywania danych i nie przesyła notatek ani innych treści użytkownika do twórcy.</p>
+      <p>Aplikacja została zaprojektowana do lokalnego przechowywania notatek i powiązanych z nimi treści na urządzeniu. Nie wymaga zakładania konta, nie korzysta z serwera twórcy do przechowywania danych i nie przesyła notatek ani innych treści aplikacji do twórcy.</p>
       <p>Aplikacja nie zawiera reklam, narzędzi analitycznych, mechanizmów śledzących ani zewnętrznych usług raportowania awarii.</p>
 
       <h2>2. Dane przechowywane na urządzeniu</h2>
-      <p>W zależności od wykorzystywanych funkcji noteS. przechowuje lokalnie:</p>
+      <p>W zależności od używanych funkcji noteS. przechowuje lokalnie:</p>
       <ul>
         <li>Notatki, w tym tytuły, tekst i sformatowaną treść.</li>
         <li>Listy zadań i metadane związane z notatkami.</li>
@@ -180,12 +190,12 @@
       <p>Hasło aplikacji nie jest przechowywane w postaci jawnej. Klucze szyfrujące są chronione za pomocą mechanizmów kryptograficznych opartych na haśle oraz zabezpieczeń Androida.</p>
       <p>Nie wszystkie informacje przechowywane lokalnie są dodatkowo szyfrowane przez aplikację. W szczególności nagrania głosowe, szkice, niektóre metadane bazy danych i ustawienia aplikacji są przechowywane w prywatnej pamięci aplikacji bez dodatkowego szyfrowania na poziomie aplikacji.</p>
       <p>Pliki te są chronione przez system izolacji aplikacji Androida i mechanizmy bezpieczeństwa urządzenia.</p>
-      <p>Jeśli korzystasz z odblokowywania biometrycznego, uwierzytelnianie jest obsługiwane przez Androida. noteS. nie uzyskuje dostępu do wzorców biometrycznych ani nie przechowuje danych dotyczących odcisków palców lub twarzy.</p>
+      <p>W przypadku korzystania z odblokowywania biometrycznego uwierzytelnianie jest obsługiwane przez Androida. noteS. nie uzyskuje dostępu do wzorców biometrycznych ani nie przechowuje danych dotyczących odcisków palców lub twarzy.</p>
 
       <h2>4. Uprawnienia i funkcje aplikacji</h2>
       <p>Aplikacja wykorzystuje uprawnienia wyłącznie w następujących celach:</p>
       <ul>
-        <li><strong>Mikrofon:</strong> do nagrywania notatek głosowych, gdy zdecydujesz się skorzystać z tej funkcji. Nagrania są przechowywane lokalnie.</li>
+        <li><strong>Mikrofon:</strong> do nagrywania notatek głosowych po uruchomieniu funkcji nagrywania. Nagrania są przechowywane lokalnie.</li>
         <li><strong>Powiadomienia:</strong> do wyświetlania lokalnych przypomnień. Treść powiadomień nie ujawnia tytułów ani zawartości notatek.</li>
         <li><strong>Ponowne uruchomienie urządzenia:</strong> do przywracania zaplanowanych przypomnień po restarcie. Wykorzystywane są w tym celu lokalne informacje o przypomnieniach.</li>
         <li><strong>Uwierzytelnianie biometryczne:</strong> do wywoływania systemowego mechanizmu uwierzytelniania Androida.</li>
@@ -194,31 +204,31 @@
 
       <h2>5. Kopie zapasowe i usługi zewnętrzne</h2>
       <p>Automatyczne kopie zapasowe Androida są wyłączone.</p>
-      <p>noteS. umożliwia ręczne tworzenie i przywracanie kopii zapasowych. Użytkownik samodzielnie wybiera miejsce zapisu lub odczytu pliku za pomocą systemowego selektora plików Androida.</p>
-      <p>Jeśli wybierzesz zewnętrzną usługę przechowywania danych lub chmurę, jej dostawca może przetwarzać kopię zapasową zgodnie z własną polityką prywatności i warunkami korzystania z usługi.</p>
+      <p>noteS. umożliwia ręczne tworzenie i przywracanie kopii zapasowych. Miejsce zapisu lub odczytu pliku jest wybierane za pomocą systemowego selektora plików Androida.</p>
+      <p>W przypadku wyboru zewnętrznej usługi przechowywania danych lub chmury jej dostawca może przetwarzać kopię zapasową zgodnie z własną polityką prywatności i warunkami korzystania z usługi.</p>
       <p><strong>Kopie zapasowe zabezpieczone hasłem</strong> są szyfrowane i przeznaczone do ochrony poufności ich zawartości.</p>
       <p><strong>Kopie zapasowe tworzone bez hasła nie są poufne.</strong> Ich zawartość jest wprawdzie szyfrowana, ale klucz potrzebny do odszyfrowania znajduje się w tym samym pliku. Każda osoba, która uzyska dostęp do pliku, może być w stanie odczytać jego zawartość.</p>
 
       <h2>6. Linki zewnętrzne i schowek</h2>
       <p>Aplikacja może otwierać linki zewnętrzne, w tym linki umieszczone w notatkach oraz opcjonalny link do strony dobrowolnego wsparcia twórcy.</p>
-      <p>Po otwarciu linku jest on obsługiwany przez przeglądarkę lub inną aplikację. Zewnętrzna usługa działa zgodnie z własną polityką prywatności. Samo otwarcie linku przez noteS. nie powoduje przesłania do niej treści notatek.</p>
-      <p>Podczas kopiowania treść jest umieszczana w schowku systemowym Androida. Dostęp do schowka i czas przechowywania jego zawartości zależą od Androida, urządzenia i innych aplikacji.</p>
+      <p>Linki zewnętrzne są obsługiwane przez przeglądarkę lub inną aplikację. Zewnętrzna usługa działa zgodnie z własną polityką prywatności. Samo otwarcie linku przez noteS. nie powoduje przesłania do niej treści notatek.</p>
+      <p>Kopiowana treść jest umieszczana w schowku systemowym Androida. Dostęp do schowka i czas przechowywania jego zawartości zależą od Androida, urządzenia i innych aplikacji.</p>
 
       <h2>7. Udostępnianie i przesyłanie danych</h2>
-      <p>Aplikacja nie ma dostępu do Internetu i nie przesyła notatek, nagrań, szkiców ani ustawień aplikacji do twórcy.</p>
+      <p>Aplikacja nie korzysta z uprawnienia Androida do dostępu do Internetu i nie przesyła notatek, nagrań, szkiców ani ustawień aplikacji do twórcy.</p>
       <p>Twórca nie gromadzi ani nie sprzedaje tych treści.</p>
-      <p>Dane mogą opuścić urządzenie, gdy samodzielnie wyeksportujesz kopię zapasową do wybranego miejsca lub dostawcy usługi albo otworzysz link zewnętrzny. W takich przypadkach za dalsze przetwarzanie odpowiada wybrany dostawca lub operator zewnętrznej usługi, zgodnie z własnymi zasadami prywatności.</p>
+      <p>Dane mogą opuścić urządzenie w przypadku ręcznego wyeksportowania kopii zapasowej do wybranego miejsca lub dostawcy usługi albo otwarcia linku zewnętrznego. W takich sytuacjach dalsze przetwarzanie odbywa się na zasadach określonych przez danego dostawcę lub operatora usługi.</p>
 
       <h2>8. Przechowywanie i usuwanie danych</h2>
-      <p>Dane pozostają w prywatnej pamięci aplikacji do czasu ich usunięcia przez użytkownika lub usunięcia danych aplikacji.</p>
-      <p>Możesz usuwać poszczególne notatki bezpośrednio w aplikacji. Powiązane nagrania i szkice, które można bezpiecznie usunąć, również są usuwane.</p>
+      <p>Dane pozostają w prywatnej pamięci aplikacji do momentu ich usunięcia lub usunięcia danych aplikacji.</p>
+      <p>Poszczególne notatki można usuwać bezpośrednio w aplikacji. Powiązane nagrania i szkice, które można bezpiecznie usunąć, również są usuwane.</p>
       <p>Wyczyszczenie pamięci aplikacji lub jej odinstalowanie usuwa lokalnie przechowywane dane aplikacji. Pliki kopii zapasowych wyeksportowane w inne miejsce należy usunąć oddzielnie.</p>
       <p>Twórca nie ma dostępu do lokalnie przechowywanych notatek i nie może usuwać ich zdalnie.</p>
 
       <h2>9. Kontakt</h2>
       <p>W sprawach dotyczących niniejszej Polityki prywatności lub zasad ochrony danych w aplikacji można skontaktować się z wydawcą:</p>
-      <p><strong>Twórca / wydawca:</strong> [MinimalW / Bartosz Wawrzeńczak]<br>
-      <strong>Adres e-mail:</strong> [minimalwstudio@gmail.com]</p>
+      <p><strong>Twórca / wydawca:</strong> MinimalW / Bartosz Wawrzeńczak<br>
+      <strong>Adres e-mail:</strong> minimalwstudio@gmail.com</p>
 
       <h2>10. Zmiany Polityki prywatności</h2>
       <p>Polityka prywatności może być aktualizowana w przypadku zmian funkcjonalności aplikacji lub obowiązujących wymagań. Aktualna wersja będzie publikowana pod tym samym adresem wraz z datą wejścia w życie.</p>
@@ -244,6 +254,16 @@
         document.title = language === "pl"
           ? "noteS. — Polityka prywatności"
           : "noteS. — Privacy Policy";
+      }
+
+      // Prevent Polish one-letter words from being left at the end of a line.
+      const walker = document.createTreeWalker(policies.pl, NodeFilter.SHOW_TEXT);
+      let textNode;
+      while ((textNode = walker.nextNode())) {
+        textNode.nodeValue = textNode.nodeValue.replace(
+          /\b([aiouwz])\s+/gi,
+          "$1\u00A0"
+        );
       }
 
       buttons.forEach(button => {
